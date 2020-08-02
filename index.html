@@ -1,0 +1,148 @@
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        #myInput {
+            background-image: url('/css/searchicon.png');
+            /* Add a search icon to input */
+            background-position: 10px 12px;
+            /* Position the search icon */
+            background-repeat: no-repeat;
+            /* Do not repeat the icon image */
+            width: 100%;
+            /* Full-width */
+            font-size: 16px;
+            /* Increase font-size */
+            padding: 12px 20px 12px 40px;
+            /* Add some padding */
+            border: 1px solid #ddd;
+            /* Add a grey border */
+            margin-bottom: 12px;
+            /* Add some space below the input */
+        }
+
+        #myTable {
+            border-collapse: collapse;
+            /* Collapse borders */
+            width: 100%;
+            /* Full-width */
+            border: 1px solid #ddd;
+            /* Add a grey border */
+            font-size: 18px;
+            /* Increase font-size */
+        }
+
+        #myTable th,
+        #myTable td {
+            text-align: left;
+            /* Left-align text */
+            padding: 12px;
+            /* Add padding */
+        }
+
+        #myTable tr {
+            /* Add a bottom border to all table rows */
+            border-bottom: 1px solid #ddd;
+        }
+
+        #myTable tr.header,
+        #myTable tr:hover {
+            /* Add a grey background color to the table header and on hover */
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+    <table id="myTable">
+        <tr class="header">
+            <th style="width:60%;">Câu Hỏi</th>
+            <th style="width:40%;">Đáp Án</th>
+        </tr>
+        <tr>
+            <td>Ai được gọi là Trạng Bùng?</td>
+            <td>Phùng Khắc Hoan</td>
+        </tr>
+        <tr>
+            <td>Thủ đô của Canada</td>
+            <td>Ottawa</td>
+        </tr>
+        <tr>
+            <td>Ăn gì không nên?</td>
+            <td>Ăn hàng, ăn dân dã</td>
+        </tr>
+        <tr>
+            <td>Cường hoá trang bị dùng gì?</td>
+            <td>Đồng</td>
+        </tr>
+
+        <tr>
+            <td>Cấp đồng hành 100 có thể tẩy tuỷ được chưa?</td>
+            <td>Rồi</td>
+        </tr>
+
+        <tr>
+            <td>Nhà tiên tri nổi tiếng?</td>
+            <td>Nostradamus</td>
+        </tr>
+
+        <tr>
+            <td>Nhà hàng hải nổi tiếng là người nước gì?</td>
+            <td>Bồ Đào Nha</td>
+        </tr>
+    </table>
+
+    <script>
+        function myFunction() {
+            // Declare variables 
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                question = tr[i].getElementsByTagName("td")[0];
+
+                if (question) {
+                    txtValue = question.textContent || question.innerText;
+                    txtValue = simplifyWord(txtValue);
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        function simplifyWord(str) {
+            // Gộp nhiều dấu space thành 1 space
+            str = str.replace(/\s+/g, ' ');
+            // loại bỏ toàn bộ dấu space (nếu có) ở 2 đầu của chuỗi
+            str = str.trim();
+            // bắt đầu xóa dấu tiếng việt  trong chuỗi
+            str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+            str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+            str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+            str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+            str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+            str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+            str = str.replace(/đ/g, "d");
+            str = str.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, "A");
+            str = str.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, "E");
+            str = str.replace(/Ì|Í|Ị|Ỉ|Ĩ/g, "I");
+            str = str.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g, "O");
+            str = str.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, "U");
+            str = str.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, "Y");
+            str = str.replace(/Đ/g, "D");
+            return str;
+        }
+    </script>
+</body>
+
+</html>
