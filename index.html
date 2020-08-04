@@ -3,6 +3,10 @@
 <head>
     <meta charset="utf-8">
     <style>
+        body {
+            font-family: "Georgia";
+        }
+
         #myInput {
             background-image: url('/css/searchicon.png');
             /* Add a search icon to input */
@@ -52,47 +56,394 @@
             background-color: #f1f1f1;
         }
     </style>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
 <body>
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Nhập câu hỏi tại đây (có dấu hoặc không dấu)">
 
     <table id="myTable">
         <tr class="header">
-            <th style="width:60%;">Câu Hỏi</th>
-            <th style="width:40%;">Đáp Án</th>
+            <th style="width:70%;">Câu Hỏi</th>
+            <th style="width:30%;">Đáp Án</th>
         </tr>
-        <tr>
+        <tr class="item">
             <td>Ai được gọi là Trạng Bùng?</td>
             <td>Phùng Khắc Hoan</td>
         </tr>
-        <tr>
+        <tr class="item">
             <td>Thủ đô của Canada</td>
             <td>Ottawa</td>
         </tr>
-        <tr>
+        <tr class="item">
             <td>Ăn gì không nên?</td>
             <td>Ăn hàng, ăn dân dã</td>
         </tr>
-        <tr>
+        <tr class="item">
             <td>Cường hoá trang bị dùng gì?</td>
             <td>Đồng</td>
         </tr>
 
-        <tr>
+        <tr class="item">
             <td>Cấp đồng hành 100 có thể tẩy tuỷ được chưa?</td>
             <td>Rồi</td>
         </tr>
 
-        <tr>
+        <tr class="item">
             <td>Nhà tiên tri nổi tiếng?</td>
             <td>Nostradamus</td>
         </tr>
 
-        <tr>
+        <tr class="item">
             <td>Nhà hàng hải nổi tiếng là người nước gì?</td>
             <td>Bồ Đào Nha</td>
         </tr>
+
+        <tr class="item">
+            <td>Tròn tròn như là cái tô, Vục miệng vào hồ đầu ướt đuôi khô. Là cái gì?</td>
+            <td>Cái gáo dừa</td>
+        </tr>
+
+        <tr class="item">
+            <td>Ca khúc gắn liền với bộ phim "Love Story" do Andy Williams sáng tác</td>
+            <td>Where do I begin</td>
+        </tr>
+
+        <tr class="item">
+            <td>Năm 939 trên sông Bạch Đằng, Ngô Quyền đánh tan giặc nào?</td>
+            <td>Nam Hán</td>
+        </tr>
+        <tr class="item">
+            <td>Cơm lam là món ẩm thực đặc sắc của các dân tộc nơi nào ở nước ta?</td>
+            <td>Tây Bắc Bộ</td>
+        </tr>
+
+        <tr class="item">
+            <td>Bạch Đằng Giang Phú là bài thơ do ai sáng tác?</td>
+            <td>Trương Hán Siêu</td>
+        </tr>
+
+        <tr class="item">
+            <td>Vị vua nào phát hành tiền giấy đầu tiên ở nước ta?</td>
+            <td>Hồ Quý Li</td>
+        </tr>
+
+        <tr class="item">
+            <td>Địa danh nào xuất hiện đầu tiên trong bài Tỳ Bà Hành của Bạch Cư Dị?</td>
+            <td>Bến Tầm Dương</td>
+        </tr>
+
+        <tr class="item">
+            <td>Những hành tinh nào không có bầu khí quyển?</td>
+            <td>Thuỷ tinh</td>
+        </tr>
+        <tr class="item">
+            <td>Hải Thượng Lãn Ông là tên hiệu của bậc danh nhân nào?</td>
+            <td>Lê Hữu Trác</td>
+        </tr>
+
+        <tr class="item">
+            <td>Ai được dân gian phong tặng danh hiệu Trạng Lường</td>
+            <td>Lương Thế Vinh</td>
+        </tr>
+
+        <tr class="item">
+            <td>1 tờ báo giảm giá 20%, cần phải tăng mấy % để có giá trị như cũ?</td>
+            <td>25%</td>
+        </tr>
+
+        <tr class="item">
+            <td>Đặc điểm nào sau đây ở người gắn liền với sự phát triển của tiếng nói?</td>
+            <td>Xương hàm dưới cằm lồi rõ</td>
+        </tr>
+
+        <tr class="item">
+            <td>Điện thoại được phát minh vào năm nào?</td>
+            <td>1876</td>
+        </tr>
+
+        <tr class="item">
+            <td>Bệnh viêm phổi có thể chữa khỏi không?</td>
+            <td>Phối hợp với bác sĩ có thể chữa khỏi</td>
+        </tr>
+
+        <tr class="item">
+            <td>Cấp đồng hành càng cao, tẩy tuỷ tăng chiến lực càng nhiều?</td>
+            <td>Đúng, có thể tăng %</td>
+        </tr>
+
+        <tr class="item">
+            <td>Dải tần số nào có tần số cao nhất trong các dải tần sau?</td>
+            <td>EHF</td>
+        </tr>
+
+        <tr class="item">
+            <td>Đơn vị tiền tệ cũ của Hy Lạp là gì?</td>
+            <td>Drachma</td>
+        </tr>
+
+        <tr class="item">
+            <td>Hàng năm nhằm vào tháng 3 khách thập phương về Nam Định để tham dự lễ hội nào?
+            </td>
+            <td>Phủ Dầy</td>
+        </tr>
+
+        <tr class="item">
+            <td>Trường Đại học nào không phải ở Mỹ?
+            </td>
+            <td>Cambridge</td>
+        </tr>
+
+        <tr class="item">
+            <td>Hiện tượng khi mặt trời, trái đất và mặt trăng theo thứ tự cùng nằm trên đường thẳng
+            </td>
+            <td>Nguyệt thực
+            </td>
+        </tr>
+
+        <tr class="item">
+            <td>Mồm bò nhưng không phải mồm bò mà là mồm bò. Là con gì?
+            </td>
+            <td>Con ốc sên</td>
+        </tr>
+
+        <tr class="item">
+            <td>Đơn vị tiền tệ của Italia?
+            </td>
+            <td>Euro</td>
+        </tr>
+
+        <tr class="item">
+            <td>Uống Azithromycin có thể phòng bệnh viêm phổi mới không?
+            </td>
+            <td>Không thể, chưa có thuốc đặc trị
+            </td>
+        </tr>
+        <tr class="item">
+            <td>Tác phẩm nào sau đây lên án chế độ nô lệ ở Mỹ vào thế kỷ 19?
+            </td>
+            <td>Túp lều bác Tom
+            </td>
+        </tr>
+        <tr class="item">
+            <td>Nhân vật kiệt xuất của thế kỷ X được UNESCO phong là danh nhân văn hóa thế giới?
+            </td>
+            <td>Nguyễn Trãi
+            </td>
+        </tr>
+        <tr class="item">
+            <td>Linh Từ Quốc Mẫu là mẹ của vị vua nào nước ta?
+            </td>
+            <td>Lý Chiêu Hoàng
+            </td>
+        </tr>
+        <tr class="item">
+            <td>Tiểu thuyết "Thời xa vắng" của tác giả nào?
+            </td>
+            <td>Lê Lưu</td>
+        </tr>
+        <tr class="item">
+            <td>Tác giả của tác phẩm “ Bố Già “ là ai?</td>
+            <td>Mario Puzzo</td>
+        </tr>
+        <tr class="item">
+            <td>Chòm sao nào có hình chữ cái W?</td>
+            <td>Thiên Hậu</td>
+        </tr>
+        <tr class="item">
+            <td>Trần Hiếu Ngân là VĐV môn thể thao nào ?</td>
+            <td>Taekwondo</td>
+        </tr>
+        <tr class="item">
+            <td>Ngọc có thể nhận từ đánh phụ bản mỗi ngày nào?</td>
+            <td>Cổ Tà Vực</td>
+        </tr>
+        <tr class="item">
+            <td>Cây lô hội (nha đam) thuộc họ nào? </td>
+            <td>Agaveceae</td>
+        </tr>
+        <tr class="item">
+            <td>Đạo nho trở thành hệ tư tưởng chính thống của đẳng cấp thống trị vào thời nào?</td>
+            <td>Thời Lê</td>
+        </tr>
+        <tr class="item">
+            <td>Đạo diễn bộ phim “Chiến tranh giữa các vì sao“</td>
+            <td>Geogre Lucas</td>
+        </tr>
+        <tr class="item">
+            <td>Năm ông cầm 2 cây sào. Lùa đàn trâu trắng thẳng vào trong hang. Dùng để chỉ việc gì?</td>
+            <td>Ăn cơm</td>
+        </tr>
+        <tr class="item">
+            <td>Sau năm 1975, cả nước bắt đầu sử dụng chung 1 loại tiền tệ từ năm nào?</td>
+            <td>1986</td>
+        </tr>
+        <tr class="item">
+            <td>Truyền công bang nhận đc gì?</td>
+            <td>Exp, 1 bạn bè</td>
+        </tr>
+        <tr class="item">
+            <td>Nước CHDCND Trung Hoa hiện nay có bao nhiêu dân tộc?</td>
+            <td>56</td>
+        </tr>
+        <tr class="item">
+            <td>Song Hoàng Liên có thể diệt virus bệnh viêm phổi mới</td>
+            <td>Không có căn cứ chính xác</td>
+        </tr>
+        <tr class="item">
+            <td>Con người đặt chân lên mặt trăng lần đầu tiên vào năm nào?</td>
+            <td>1969</td>
+        </tr>
+        <tr class="item">
+            <td>Vị tướng nào muốn chinh phạt cả Châu Âu?</td>
+            <td>Napoleon</td>
+        </tr>
+        <tr class="item">
+            <td>Vụ nhiễm độc thuỷ ngân ở vịnh Minamata (Nhật) do nước thải xảy ra vào năm nào?</td>
+            <td>1952</td>
+        </tr>
+        <tr class="item">
+            <td>Ai đạt danh hiệu quả bóng vàng Việt Nam năm 2018?</td>
+            <td>Nguyễn Quang Hải</td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="item">
+            <td></td>
+            <td></td>
+        </tr>
+
     </table>
 
     <script>

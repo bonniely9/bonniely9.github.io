@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Add Question and Answer</title>
+    <style>
+        body {
+            margin: 15px;
+        }
+
+        div,
+        span {
+            margin-bottom: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+            <span class="input-group-text" style="width: 100px" id="addon-wrapping">Question</span>
+        </div>
+        <input type="text" id="question" class="form-control" aria-label="Question" aria-describedby="addon-wrapping">
+    </div>
+
+    <div class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+            <span class="input-group-text" style="width: 100px" id="addon-wrapping">Answer</span>
+        </div>
+        <input type="text" id="answer" class="form-control" aria-label="Answer" aria-describedby="addon-wrapping">
+    </div>
+
+    <button type="button" onclick="addQuestion()" class="btn btn-outline-primary">Add Question</button>
+
+    <script>
+        function addQuestion() {
+            var question = document.getElementById('question').value;
+            var answer = document.getElementById('answer').value;
+
+            if (question && answer) {
+
+            }
+        }
+    </script>
+</body>
+
+</html>
